@@ -512,11 +512,7 @@ double	__builtin_expm1(double) __NDK_FPABI_MATH__;
 double	__builtin_fma(double, double, double) __NDK_FPABI_MATH__;
 double	__builtin_hypot(double, double) __NDK_FPABI_MATH__;
 int	__builtin_ilogb(double) __NDK_FPABI_MATH__ __pure2;
-<<<<<<< HEAD
-#if !defined(__clang__)
-=======
-#if !defined(__clang__) || __clang_major__ > 3 || (__clang_major__ == 3 && __clang_minor__ >= 9)
->>>>>>> b198e4f... NDK: More files for clang 3.7+ compatibility
+#if !defined(__clang__) || __clang_major__ > 3 || (__clang_major__ == 3 && __clang_minor__ >= 10)
 /* See upstream bug http://llvm.org/bugs/show_bug.cgi?id=20958 */
 int	__builtin_isinf(double) __NDK_FPABI_MATH__ __pure2;
 int	__builtin_isnan(double) __NDK_FPABI_MATH__ __pure2;
